@@ -4,7 +4,9 @@ RUN set -x \
     && apk add --no-cache \
     git \
     build-base \
-    mysql-client
+    mysql-client \
+    tar \
+    gzip
 
 ENV GOPATH /go
 ENV APP_DIR ${GOPATH}/src/github.com
