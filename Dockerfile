@@ -22,5 +22,6 @@ USER go
 
 RUN go get -u github.com/golang/dep/...
 RUN go get -u github.com/jteeuwen/go-bindata/...
+RUN go get -u bitbucket.org/liamstask/goose/cmd/goose
 
 EXPOSE 9090:9090
