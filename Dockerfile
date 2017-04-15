@@ -20,7 +20,7 @@ RUN set -x \
 WORKDIR ${APP_DIR}
 USER go
 
-RUN go get -u github.com/mattn/gom
+RUN go get -u github.com/golang/dep/...
 RUN go get -u github.com/jteeuwen/go-bindata/...
 
 EXPOSE 9090:9090
