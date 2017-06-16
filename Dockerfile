@@ -6,7 +6,8 @@ RUN set -x \
     build-base \
     mysql-client \
     tar \
-    gzip
+    gzip \
+    curl
 
 ENV GOPATH /go
 ENV APP_DIR ${GOPATH}/src/github.com
