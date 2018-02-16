@@ -1,4 +1,4 @@
-FROM golang:1.9.1-alpine
+FROM golang:1.9.4-alpine3.7
 
 RUN set -x \
     && apk add --no-cache \
@@ -23,7 +23,8 @@ USER go
 
 RUN set -x \
     && go get -u github.com/golang/dep/... \
-    && go get -u github.com/jteeuwen/go-bindata/... \
+    && go get -u github.com/jessevdk/go-assets \
+    && go get -u github.com/jessevdk/go-assets-builder \
     && go get -u bitbucket.org/liamstask/goose/cmd/goose \
     && go get -u github.com/onsi/ginkgo/ginkgo \
     && go get -u github.com/onsi/gomega
