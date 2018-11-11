@@ -1,4 +1,4 @@
-FROM golang:1.9.4-alpine3.7
+FROM golang:1.11.2-alpine3.8
 
 RUN set -x \
     && apk add --no-cache \
