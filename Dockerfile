@@ -16,6 +16,7 @@ RUN set -x \
     && adduser -D -u 1000 go \
     && echo 'go:password' | chpasswd \
     && mkdir -p ${APP_DIR} \
+    && mkdir -p ${GOPATH}/pkg/mod \
     && chown -R go:go /go
 
 WORKDIR ${APP_DIR}
