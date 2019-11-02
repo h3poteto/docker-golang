@@ -1,4 +1,4 @@
-FROM golang:1.11.2-alpine3.8
+FROM golang:1.13.4-alpine3.10
 
 RUN set -x \
     && apk add --no-cache \
@@ -22,11 +22,8 @@ WORKDIR ${APP_DIR}
 USER go
 
 RUN set -x \
-    && go get -u github.com/golang/dep/... \
     && go get -u github.com/jessevdk/go-assets \
     && go get -u github.com/jessevdk/go-assets-builder \
     && go get -u bitbucket.org/liamstask/goose/cmd/goose \
     && go get -u github.com/onsi/ginkgo/ginkgo \
     && go get -u github.com/onsi/gomega
-
-EXPOSE 9090:9090
